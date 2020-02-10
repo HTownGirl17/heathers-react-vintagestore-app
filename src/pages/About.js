@@ -1,19 +1,6 @@
 import React from "react";
 
 export default function About() {
-  const [height, setHeight] = React.useState(0);
-
-  React.useEffect(() => {
-    console.log("hello from about");
-
-    window.addEventListener("scroll", () => {
-      setHeight(window.pageYOffset);
-    });
-    return () => {
-      console.log("about unmounted");
-      return window.removeEventListener("scroll", () => {});
-    };
-  });
   return (
     <section className="section about-section">
       <h1 className="section-title">About Us</h1>

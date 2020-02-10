@@ -1,5 +1,4 @@
 import React from "react";
-// import localCart from "../utils/localCart";
 import reducer from "./reducer";
 import { REMOVE, INCREASE, DECREASE, ADD_TO_CART, CLEAR_CART } from "./actions";
 function getCartFromLocalStorage() {
