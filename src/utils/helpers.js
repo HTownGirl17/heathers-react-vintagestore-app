@@ -15,3 +15,23 @@ export function featuredProducts(data) {
     return item.featured === true;
   });
 }
+
+// paginate
+export function paginate(products) {
+  const itemsPerPage = 4;
+  const numberOfPages = Math.ceil(products.length / itemsPerPage);
+
+  // splice method for array
+  // const newProducts = Array.from({ length: numberOfPages }, () => {
+  //   return products.splice(0, itemsPerPage);
+  // });
+
+  // slice method for array
+  const newProducts = Array.from({ length: numberOfPages }, (_, index) => {
+    const start = index * itemsPerPage;
+    return products.slice(start, start + itemsPerPage);
+  });
+
+  // our code goes here
+  return newProducts;
+}
