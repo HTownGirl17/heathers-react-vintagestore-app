@@ -75,7 +75,6 @@ export default function ProductProvider({ children }) {
     } else {
       filterValue = value;
     }
-    console.log(type, filter, value);
     setFilters({ ...filters, [filter]: filterValue });
   };
   return (

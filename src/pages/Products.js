@@ -5,7 +5,7 @@ import Loading from "../components/Loading";
 import Filters from "../components/Products/Filters";
 import PageProducts from "../components/Products/PageProducts";
 export default function Products() {
-  const { loading, sorted } = React.useContext(ProductContext);
+  const { loading } = React.useContext(ProductContext);
 
   if (loading) {
     return <Loading />;
@@ -13,7 +13,7 @@ export default function Products() {
   return (
     <>
       <Filters />
-      <PageProducts />z
+      <PageProducts />
     </>
   );
 }
